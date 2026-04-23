@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<title>底氣職場作戰類型｜12 題參考測驗</title>
+<meta name="description" content="12 題參考測驗 · 找出你在工作上的主要作戰風格。衝擊型／分析型／關係型／創造型／執行型——你該用哪把刀？">
+<meta property="og:title" content="底氣職場作戰類型｜12 題參考測驗">
+<meta property="og:description" content="12 題參考測驗 · 找出你在工作上的主要作戰風格。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_TW">
+<style>
+  :root{--pri:#3a2e2a;--acc:#d4a574;--acc-2:#b8895c;--bg:#f5f0ec;--card:#fff;--txt:#3a2e2a;--txt2:#6b5b52;--bdr:#e8ddd5;--warn:#c06b5a;--good:#7eb8a0;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{font-size:16px;-webkit-text-size-adjust:100%;}
+  body{font-family:"PingFang TC","Noto Sans TC",sans-serif;background:var(--bg);color:var(--txt);line-height:1.7;}
+  .hero{background:linear-gradient(160deg,#3a2e2a,#5a4a42);color:#f0ece8;padding:50px 24px 40px;text-align:center;}
+  .hero h1{font-size:1.6rem;font-weight:700;letter-spacing:2px;margin-bottom:10px;}
+  .hero h1 em{color:var(--acc);font-style:normal;}
+  .hero p{font-size:.9rem;color:#c8bdb5;max-width:380px;margin:0 auto;line-height:1.8;}
+  .wrap{max-width:520px;margin:0 auto;padding:0 20px;}
+  .disc{background:#fbf6f0;border:1px solid #e8d5b7;border-left:4px solid var(--acc-2);border-radius:10px;padding:16px 18px;margin:24px 0 10px;font-size:.8rem;line-height:1.75;color:#8a6f5c;}
+  .disc b{color:var(--pri);}
+  .intro{text-align:center;padding:20px 0 8px;font-size:.88rem;color:var(--txt2);}
+  .intro b{color:var(--pri);}
+  .pb{position:sticky;top:0;z-index:50;background:var(--bg);padding:10px 0 6px;}
+  .pb-track{height:5px;background:#e8ddd5;border-radius:3px;overflow:hidden;}
+  .pb-fill{height:100%;background:linear-gradient(90deg,var(--acc),var(--acc-2));border-radius:3px;transition:width .3s ease;width:0;}
+  .pb-txt{text-align:center;font-size:.72rem;color:#a09585;margin-top:4px;letter-spacing:1px;}
+
+  .qc{background:var(--card);border-radius:14px;padding:22px 20px;margin-bottom:14px;box-shadow:0 2px 16px rgba(58,46,42,.08);border:1px solid var(--bdr);}
+  .qh{display:flex;gap:12px;margin-bottom:14px;}
+  .qn{flex-shrink:0;width:28px;height:28px;background:var(--acc);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;margin-top:2px;}
+  .qt{font-size:.95rem;color:var(--pri);line-height:1.65;font-weight:600;}
+
+  .opts{display:flex;flex-direction:column;gap:8px;}
+  .opts input[type=radio]{position:absolute;opacity:0;width:0;height:0;pointer-events:none;}
+  .opts label{display:block;padding:12px 16px;border:2px solid var(--bdr);background:var(--card);border-radius:10px;font-size:.9rem;color:var(--txt2);cursor:pointer;line-height:1.6;transition:all .15s ease;-webkit-tap-highlight-color:transparent;}
+  .opts input[type=radio]:checked+label{background:linear-gradient(135deg,#faf3ea,#f5ead8);border-color:var(--acc);color:var(--pri);font-weight:600;box-shadow:0 2px 10px rgba(212,165,116,.2);}
+  .opts label .opt-prefix{display:inline-block;width:22px;color:var(--acc-2);font-weight:700;}
+  .opts input[type=radio]:checked+label .opt-prefix{color:var(--pri);}
+
+  .sw{text-align:center;padding:24px 0 40px;}
+  .sb{display:inline-block;padding:16px 48px;background:var(--pri);color:#f0ece8;font-size:1rem;font-weight:700;border:none;border-radius:50px;letter-spacing:1px;cursor:pointer;-webkit-appearance:none;text-decoration:none;-webkit-tap-highlight-color:rgba(212,165,116,.3);}
+  .sh{font-size:.78rem;color:#bbb;margin-top:10px;}
+
+  .result{display:none;padding:0 0 60px;}
+  .result.show{display:block;}
+  body.showing-result .hero{display:none !important;}
+  .tc{background:linear-gradient(160deg,#3a2e2a,#5a4a42);border-radius:18px;padding:38px 24px;text-align:center;color:#f0ece8;margin-bottom:18px;}
+  .tc .tl{font-size:.72rem;color:var(--acc);letter-spacing:3px;margin-bottom:10px;font-weight:700;}
+  .tc .ti{font-size:3.4rem;margin-bottom:10px;line-height:1;}
+  .tc .tn{font-size:1.9rem;font-weight:800;color:#fff;margin-bottom:6px;letter-spacing:3px;}
+  .tc .tsub{font-size:.85rem;color:var(--acc);font-weight:600;margin-bottom:18px;letter-spacing:1px;}
+  .tc .td{font-size:.88rem;color:#d8ccc4;line-height:1.9;text-align:left;padding:0 4px;}
+
+  .sub-card{background:var(--card);border:1px solid var(--bdr);border-radius:14px;padding:22px 20px;margin-bottom:14px;box-shadow:0 2px 16px rgba(58,46,42,.06);border-left:4px solid var(--acc-2);}
+  .sub-card .sc-label{font-size:.68rem;color:var(--acc-2);letter-spacing:3px;font-weight:700;margin-bottom:6px;}
+  .sub-card .sc-name{font-size:1.25rem;font-weight:800;color:var(--pri);margin-bottom:4px;}
+  .sub-card .sc-sub{font-size:.82rem;color:var(--txt2);margin-bottom:12px;}
+  .sub-card .sc-note{font-size:.85rem;color:var(--txt2);line-height:1.8;}
+
+  .action-card{background:var(--card);border:1px solid var(--bdr);border-radius:14px;padding:24px 22px;margin-bottom:14px;box-shadow:0 2px 16px rgba(58,46,42,.06);}
+  .action-card h3{font-size:.75rem;color:var(--acc);letter-spacing:3px;font-weight:700;margin-bottom:12px;}
+  .action-card .line{font-size:.88rem;color:var(--txt2);line-height:1.85;margin-bottom:10px;padding-left:22px;position:relative;}
+  .action-card .line::before{content:"";position:absolute;left:0;top:11px;width:10px;height:10px;border-radius:50%;background:var(--acc);}
+  .action-card .line.neg::before{background:var(--warn);}
+  .action-card .line b{color:var(--pri);}
+
+  .bars-mini{background:var(--card);border-radius:12px;padding:18px 18px;margin-bottom:14px;border:1px solid var(--bdr);}
+  .bars-mini .bmh{font-size:.72rem;color:var(--acc);letter-spacing:2px;font-weight:700;text-align:center;margin-bottom:12px;}
+  .bar-mini{display:grid;grid-template-columns:90px 1fr 34px;gap:10px;align-items:center;margin-bottom:8px;}
+  .bar-mini .bm-name{font-size:.82rem;color:var(--pri);font-weight:700;}
+  .bar-mini .bm-track{height:8px;background:#f0e8e0;border-radius:4px;overflow:hidden;}
+  .bar-mini .bm-fill{height:100%;background:linear-gradient(90deg,var(--acc),var(--acc-2));transition:width 1s ease;}
+  .bar-mini .bm-val{font-size:.78rem;color:var(--acc-2);font-weight:700;text-align:right;}
+
+  .back-to-course{background:linear-gradient(135deg,#faf3ea,#f5ead8);border:1px solid #e8d5b7;border-radius:14px;padding:24px 20px;margin-bottom:14px;text-align:center;}
+  .back-to-course h3{font-size:.95rem;color:var(--pri);font-weight:700;margin-bottom:10px;line-height:1.6;}
+  .back-to-course p{font-size:.82rem;color:var(--txt2);line-height:1.8;margin-bottom:14px;}
+
+  .disc-bot{background:#fbf6f0;border:1px solid #e8d5b7;border-radius:10px;padding:16px 18px;margin:8px 0 14px;font-size:.78rem;line-height:1.75;color:#8a6f5c;}
+  .disc-bot b{color:var(--pri);}
+
+  .footer{text-align:center;padding:20px 0 40px;font-size:.75rem;color:#ccc;}
+  .mini-disclaimer{text-align:center;padding:14px 20px 4px;font-size:.7rem;color:#b0a598;line-height:1.7;max-width:520px;margin:0 auto;}
+</style>
+</head>
+<body>
+
+<div id="testSection">
+<div class="hero">
+  <h1><em>《底氣》</em>職場作戰類型</h1>
+  <p>12 題 · 找出你在工作上的主要作戰風格<br><br>衝擊型 · 分析型 · 關係型<br>創造型 · 執行型<br><br>你該用哪把刀？</p>
+</div>
+</div>
+
+<div class="wrap">
+  <div class="disc" id="disc-top">
+    <b>⚠️ 這是參考，不是定論</b><br>
+    這是陳頌昊根據 15 年帶團隊、做顧問、觀察他人的經驗所做的簡單分類。
+    它不代表完整的你——只是一個<b>參考起點</b>。<br><br>
+    真正的你，是從<b>過往經驗復盤</b>、<b>一週自我觀察</b>、<b>身邊人的回饋</b>——三個面向找出來的。
+    這個測驗只是卡關時的備援。
+  </div>
+
+  <div class="intro" id="intro">每題選最像你的一個。<br><b>沒有對錯</b>，寫你真的是什麼，不是希望的樣子。</div>
+
+  <div class="pb"><div class="pb-track"><div class="pb-fill" id="PBF"></div></div><div class="pb-txt" id="PBT">0 / 12 題</div></div>
+
+  <form id="F">
+
+  <!-- Q1 -->
+  <div class="qc" id="qc1">
+    <div class="qh"><span class="qn">1</span><div class="qt">剛加入一個新團隊，你第一週最自然會做的事是——</div></div>
+    <div class="opts">
+      <input type="radio" name="q1" value="A" id="q1A"><label for="q1A"><span class="opt-prefix">①</span>直接找機會表現，讓人記住你</label>
+      <input type="radio" name="q1" value="B" id="q1B"><label for="q1B"><span class="opt-prefix">②</span>先觀察組織運作、搞懂運作規律</label>
+      <input type="radio" name="q1" value="C" id="q1C"><label for="q1C"><span class="opt-prefix">③</span>花時間認識每個同事、混熟</label>
+      <input type="radio" name="q1" value="D" id="q1D"><label for="q1D"><span class="opt-prefix">④</span>看哪些流程可以改、哪些可以做得不一樣</label>
+      <input type="radio" name="q1" value="E" id="q1E"><label for="q1E"><span class="opt-prefix">⑤</span>認真學既定 既定流程，把基本工作做到位</label>
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="qc" id="qc2">
+    <div class="qh"><span class="qn">2</span><div class="qt">工作突然出大問題，你的第一反應通常是——</div></div>
+    <div class="opts">
+      <input type="radio" name="q2" value="A" id="q2A"><label for="q2A"><span class="opt-prefix">①</span>立刻行動、先止血再說</label>
+      <input type="radio" name="q2" value="B" id="q2B"><label for="q2B"><span class="opt-prefix">②</span>停下來拆問題、找真正的根源</label>
+      <input type="radio" name="q2" value="C" id="q2C"><label for="q2C"><span class="opt-prefix">③</span>先通知相關的人、一起商量</label>
+      <input type="radio" name="q2" value="D" id="q2D"><label for="q2D"><span class="opt-prefix">④</span>想想有沒有別的解法、能不能翻桌重來</label>
+      <input type="radio" name="q2" value="E" id="q2E"><label for="q2E"><span class="opt-prefix">⑤</span>照過往的處理流程 / 既定流程 來解決</label>
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="qc" id="qc3">
+    <div class="qh"><span class="qn">3</span><div class="qt">你工作時最有勁的時候是——</div></div>
+    <div class="opts">
+      <input type="radio" name="q3" value="A" id="q3A"><label for="q3A"><span class="opt-prefix">①</span>在快節奏、高壓的戰場上直接拿結果</label>
+      <input type="radio" name="q3" value="B" id="q3B"><label for="q3B"><span class="opt-prefix">②</span>獨自深入研究一個複雜問題</label>
+      <input type="radio" name="q3" value="C" id="q3C"><label for="q3C"><span class="opt-prefix">③</span>跟一群人一起完成某件事</label>
+      <input type="radio" name="q3" value="D" id="q3D"><label for="q3D"><span class="opt-prefix">④</span>做一件別人沒做過的事、開新的局</label>
+      <input type="radio" name="q3" value="E" id="q3E"><label for="q3E"><span class="opt-prefix">⑤</span>把一件事做到完美、穩穩交付</label>
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="qc" id="qc4">
+    <div class="qh"><span class="qn">4</span><div class="qt">別人最常稱讚你哪一點？</div></div>
+    <div class="opts">
+      <input type="radio" name="q4" value="A" id="q4A"><label for="q4A"><span class="opt-prefix">①</span>敢衝、有膽、衝撞力強</label>
+      <input type="radio" name="q4" value="B" id="q4B"><label for="q4B"><span class="opt-prefix">②</span>想得深、看得透、分析到位</label>
+      <input type="radio" name="q4" value="C" id="q4C"><label for="q4C"><span class="opt-prefix">③</span>會帶人、好相處、照顧人</label>
+      <input type="radio" name="q4" value="D" id="q4D"><label for="q4D"><span class="opt-prefix">④</span>有創意、有想法、點子多</label>
+      <input type="radio" name="q4" value="E" id="q4E"><label for="q4E"><span class="opt-prefix">⑤</span>可靠、穩定、交出來的東西品質好</label>
+    </div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="qc" id="qc5">
+    <div class="qh"><span class="qn">5</span><div class="qt">團隊開會討論時，你最常扮演的角色是——</div></div>
+    <div class="opts">
+      <input type="radio" name="q5" value="A" id="q5A"><label for="q5A"><span class="opt-prefix">①</span>推進者——催大家決定、逼時間、往前衝</label>
+      <input type="radio" name="q5" value="B" id="q5B"><label for="q5B"><span class="opt-prefix">②</span>質疑者——問為什麼、看邏輯漏洞</label>
+      <input type="radio" name="q5" value="C" id="q5C"><label for="q5C"><span class="opt-prefix">③</span>協調者——顧及每個人的想法、找共識</label>
+      <input type="radio" name="q5" value="D" id="q5D"><label for="q5D"><span class="opt-prefix">④</span>發想者——提新的角度、新做法</label>
+      <input type="radio" name="q5" value="E" id="q5E"><label for="q5E"><span class="opt-prefix">⑤</span>整理者——把討論收斂、記下結論、分工</label>
+    </div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="qc" id="qc6">
+    <div class="qh"><span class="qn">6</span><div class="qt">下列哪種工作讓你最痛苦？</div></div>
+    <div class="opts">
+      <input type="radio" name="q6" value="E" id="q6A"><label for="q6A"><span class="opt-prefix">①</span>全部要臨場應變、沒有任何準備</label>
+      <input type="radio" name="q6" value="D" id="q6B"><label for="q6B"><span class="opt-prefix">②</span>重複做已經會的事、長期不變</label>
+      <input type="radio" name="q6" value="C" id="q6C"><label for="q6C"><span class="opt-prefix">③</span>要得罪人、踩線才能完成的任務</label>
+      <input type="radio" name="q6" value="B" id="q6D"><label for="q6D"><span class="opt-prefix">④</span>別人情緒化、非理性決策的環境</label>
+      <input type="radio" name="q6" value="A" id="q6E"><label for="q6E"><span class="opt-prefix">⑤</span>一個人默默做好幾個月才出成果</label>
+    </div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="qc" id="qc7">
+    <div class="qh"><span class="qn">7</span><div class="qt">你在工作上最想被記住的是——</div></div>
+    <div class="opts">
+      <input type="radio" name="q7" value="A" id="q7A"><label for="q7A"><span class="opt-prefix">①</span>打下一場別人不敢打的仗</label>
+      <input type="radio" name="q7" value="B" id="q7B"><label for="q7B"><span class="opt-prefix">②</span>看穿一件別人沒看穿的事</label>
+      <input type="radio" name="q7" value="C" id="q7C"><label for="q7C"><span class="opt-prefix">③</span>讓一群人因為你而凝聚</label>
+      <input type="radio" name="q7" value="D" id="q7D"><label for="q7D"><span class="opt-prefix">④</span>做出一件以前沒有的東西</label>
+      <input type="radio" name="q7" value="E" id="q7E"><label for="q7E"><span class="opt-prefix">⑤</span>把一件事做到所有人都放心</label>
+    </div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="qc" id="qc8">
+    <div class="qh"><span class="qn">8</span><div class="qt">你學一個新領域時，最自然的方式是——</div></div>
+    <div class="opts">
+      <input type="radio" name="q8" value="A" id="q8A"><label for="q8A"><span class="opt-prefix">①</span>直接上場試，邊做邊學</label>
+      <input type="radio" name="q8" value="B" id="q8B"><label for="q8B"><span class="opt-prefix">②</span>先把理論、架構搞懂</label>
+      <input type="radio" name="q8" value="C" id="q8C"><label for="q8C"><span class="opt-prefix">③</span>找懂的人聊、進這個領域的圈子</label>
+      <input type="radio" name="q8" value="D" id="q8D"><label for="q8D"><span class="opt-prefix">④</span>試幾個不同角度、找出自己的方法</label>
+      <input type="radio" name="q8" value="E" id="q8E"><label for="q8E"><span class="opt-prefix">⑤</span>買一套完整教材、從頭學到尾</label>
+    </div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="qc" id="qc9">
+    <div class="qh"><span class="qn">9</span><div class="qt">參加完全不認識人的聚會，你會——</div></div>
+    <div class="opts">
+      <input type="radio" name="q9" value="A" id="q9A"><label for="q9A"><span class="opt-prefix">①</span>主動找人聊、炒熱氣氛</label>
+      <input type="radio" name="q9" value="B" id="q9B"><label for="q9B"><span class="opt-prefix">②</span>觀察整場、聽別人講、心裡默默分析</label>
+      <input type="radio" name="q9" value="C" id="q9C"><label for="q9C"><span class="opt-prefix">③</span>跟幾個有緣分的人深聊</label>
+      <input type="radio" name="q9" value="D" id="q9D"><label for="q9D"><span class="opt-prefix">④</span>想辦法找有趣的話題 / 活動來玩</label>
+      <input type="radio" name="q9" value="E" id="q9E"><label for="q9E"><span class="opt-prefix">⑤</span>默默待在舒服的位置、做自己</label>
+    </div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="qc" id="qc10">
+    <div class="qh"><span class="qn">10</span><div class="qt">遇到重大挫折時，你通常會——</div></div>
+    <div class="opts">
+      <input type="radio" name="q10" value="A" id="q10A"><label for="q10A"><span class="opt-prefix">①</span>直接再上、把挫折當燃料</label>
+      <input type="radio" name="q10" value="B" id="q10B"><label for="q10B"><span class="opt-prefix">②</span>拆解發生什麼事、下次避開</label>
+      <input type="radio" name="q10" value="C" id="q10C"><label for="q10C"><span class="opt-prefix">③</span>找信任的人聊、重建狀態再出發</label>
+      <input type="radio" name="q10" value="D" id="q10D"><label for="q10D"><span class="opt-prefix">④</span>轉向做別的、換個賽道找新機會</label>
+      <input type="radio" name="q10" value="E" id="q10E"><label for="q10E"><span class="opt-prefix">⑤</span>重新整理好流程、按部就班再來一次</label>
+    </div>
+  </div>
+
+  <!-- Q11 -->
+  <div class="qc" id="qc11">
+    <div class="qh"><span class="qn">11</span><div class="qt">你覺得自己最大的工作特色是——</div></div>
+    <div class="opts">
+      <input type="radio" name="q11" value="A" id="q11A"><label for="q11A"><span class="opt-prefix">①</span>有氣場、有能量、能鼓動人</label>
+      <input type="radio" name="q11" value="B" id="q11B"><label for="q11B"><span class="opt-prefix">②</span>看事情準、有洞察力</label>
+      <input type="radio" name="q11" value="C" id="q11C"><label for="q11C"><span class="opt-prefix">③</span>懂人、會讀空氣、能讓人放心</label>
+      <input type="radio" name="q11" value="D" id="q11D"><label for="q11D"><span class="opt-prefix">④</span>想法特別、不照常規</label>
+      <input type="radio" name="q11" value="E" id="q11E"><label for="q11E"><span class="opt-prefix">⑤</span>可以信賴、說到做到</label>
+    </div>
+  </div>
+
+  <!-- Q12 -->
+  <div class="qc" id="qc12">
+    <div class="qh"><span class="qn">12</span><div class="qt">五年後你希望自己是——</div></div>
+    <div class="opts">
+      <input type="radio" name="q12" value="A" id="q12A"><label for="q12A"><span class="opt-prefix">①</span>帶領一個能做大事的團隊</label>
+      <input type="radio" name="q12" value="B" id="q12B"><label for="q12B"><span class="opt-prefix">②</span>某個領域的專家 / 權威</label>
+      <input type="radio" name="q12" value="C" id="q12C"><label for="q12C"><span class="opt-prefix">③</span>在某個社群或圈子裡被深深信任的人</label>
+      <input type="radio" name="q12" value="D" id="q12D"><label for="q12D"><span class="opt-prefix">④</span>做出一個以前沒有的東西</label>
+      <input type="radio" name="q12" value="E" id="q12E"><label for="q12E"><span class="opt-prefix">⑤</span>擁有一套穩定可複製的事業 / 能力</label>
+    </div>
+  </div>
+
+  </form>
+
+  <div class="sw" id="sw">
+    <a href="javascript:void(0)" class="sb" id="sb" onclick="GO()">看結果</a>
+    <div class="sh" id="sh">全部填完就能看結果</div>
+  </div>
+
+  <!-- ==================== RESULT ==================== -->
+  <div class="result" id="R">
+
+    <div class="tc">
+      <div class="tl">你 的 作 戰 類 型</div>
+      <div class="ti" id="TI"></div>
+      <div class="tn" id="TN"></div>
+      <div class="tsub" id="TSUB"></div>
+      <div class="td" id="TD"></div>
+    </div>
+
+    <div class="sub-card" id="SUBCARD">
+      <div class="sc-label">副 類 型</div>
+      <div class="sc-name" id="SUBNAME"></div>
+      <div class="sc-sub" id="SUBSUB"></div>
+      <div class="sc-note" id="SUBNOTE"></div>
+    </div>
+
+    <div class="bars-mini">
+      <div class="bmh">— 五型分數分佈 —</div>
+      <div id="BARS"></div>
+    </div>
+
+    <div class="action-card" id="ACT-GOOD">
+      <h3>— 你 該 做 的 事 —</h3>
+      <div id="ACT-GOOD-LIST"></div>
+    </div>
+
+    <div class="action-card" id="ACT-BAD">
+      <h3>— 你 不 該 硬 做 的 事 —</h3>
+      <div id="ACT-BAD-LIST"></div>
+    </div>
+
+    <div class="action-card" id="ACT-WHY">
+      <h3>— 對 的 Why 長 這 樣 —</h3>
+      <div id="ACT-WHY-LIST"></div>
+    </div>
+
+    <div class="back-to-course">
+      <h3>這只是參考 · 真正的你要從三個面向找</h3>
+      <p>① 過往經驗復盤　②一週自我觀察　③ 詢問身邊的人<br><br>回到第 1 堂課——用這三個面向，寫出你真正的定錨卡。</p>
+    </div>
+
+    <div class="disc-bot">
+      <b>⚠️ 再提醒一次：</b>這個測驗是陳頌昊根據過往經驗的簡單分類，<b>不代表完整的你</b>。
+      如果結果跟你的感覺不符，以你自己的感覺為主——那才是真實的。
+    </div>
+
+  </div>
+
+</div>
+
+<div class="mini-disclaimer">本檢測為自我覺察輔助工具，非心理診斷或醫療評估。</div>
+<div class="footer">底氣職場作戰類型 © 陳頌昊</div>
+
+<script>
+// =========== TYPE DATA ===========
+var TYPES = {
+  A: {
+    name:'衝擊型', emoji:'🔥', subtitle:'靠能量 · 衝勁 · 氣場打開局面',
+    desc:'你是工作場上那種「一到現場氣就起來」的人。不怕拒絕、不怕衝撞、不怕被討厭——你的武器就是別人沒有的那股勁。<br><br>你在前線最有勁；關在後台做細節會讓你慢慢失能。',
+    good:[
+      '開發新客 / 新市場 / 新業態',
+      '危機公關 / 破冰場合 / 需要第一個出手的場合',
+      '短打型、高強度、直接拿結果的工作'
+    ],
+    bad:[
+      '關在後台做報表 / 品管 / 長期獨自研究',
+      '需要細節精密、零容錯的工作',
+      '照 既定流程 重複性高的崗位'
+    ],
+    why:[
+      '「我想證明這個領域可以被我改寫」',
+      '「我享受把不可能變可能的那一刻」',
+      '「我想讓原本沒動靜的局動起來」'
+    ]
+  },
+  B: {
+    name:'分析型', emoji:'🧠', subtitle:'靠邏輯 · 拆解力 · 看穿本質',
+    desc:'你是那種「遇到問題先拆它」的人。你看的不是表面、是規律；你信的不是感覺、是證據。<br><br>你的武器是深度——別人的結論你能推到更底下；別人的困境你能看到真正的病灶。',
+    good:[
+      '企業大客戶 / 專業諮詢（醫美 / 金融 / 企業服務）',
+      '策略分析 / 研究 / 商業智能',
+      '技術深耕 / 架構 / 專家路線'
+    ],
+    bad:[
+      '臨場破冰、秒回應的場合',
+      '純情感說服型工作',
+      '需要在非理性決策環境生存的崗位'
+    ],
+    why:[
+      '「我想搞懂這件事為什麼這樣」',
+      '「我想在別人用感覺決定的領域，用真相翻案」',
+      '「我想把錯的事情拆到不再發生」'
+    ]
+  },
+  C: {
+    name:'關係型', emoji:'🪢', subtitle:'靠人際 · 氛圍 · 網絡建構',
+    desc:'你是那種「一群人因為你而願意合作」的人。你讀氛圍很快、記得每個人的細節、把客戶變朋友、把同事變戰友。<br><br>你的武器不是一個人多強，是你能讓一群人一起強起來。',
+    good:[
+      '關係型業務 / 大客戶經理 / 續約轉介紹',
+      '人資 / 專案管理 / 公關 / 客戶經營',
+      '社群經營 / 熟客經濟 / 會員制服務'
+    ],
+    bad:[
+      '一個人閉關攻堅',
+      '需要冷酷執行、情感不能介入的崗位',
+      '得罪人才能成事的場合'
+    ],
+    why:[
+      '「我想看一群人因為我變得更連結」',
+      '「我想成為別人可以倚靠的那個人」',
+      '「我想讓事情因為關係而不是規則運轉」'
+    ]
+  },
+  D: {
+    name:'創造型', emoji:'💡', subtitle:'靠想法 · 跨界組合 · 不照本宣科',
+    desc:'你是那種「永遠看到另一種可能」的人。守成會讓你很膩；重複會讓你熄火；但給你一個白板、一個模糊的目標——你會變出別人沒想過的東西。<br><br>你的武器是你腦袋裡那些別人沒看到的組合。',
+    good:[
+      '開新產品線 / 新市場 / 新通路',
+      '研發 / 創新 / 品牌策劃 / 產品設計',
+      '個人品牌 / 獨立工作室 / 自創風格'
+    ],
+    bad:[
+      '日常維運、重複執行',
+      '品管、品管、細節核對',
+      '長期做已經會的事'
+    ],
+    why:[
+      '「我想做沒人做過的東西」',
+      '「我想讓『原本這樣』變成『也可以這樣』」',
+      '「我想用這個領域的方法，解決另一個領域的問題」'
+    ]
+  },
+  E: {
+    name:'執行型', emoji:'🛡️', subtitle:'靠紀律 · 細節 · 穩定輸出',
+    desc:'你是那種「承諾的事一定交付」的人。別人出錯你會第一個看到；混亂的場面你會想辦法把它收斂。<br><br>你的武器是可靠——在一個什麼都在變的時代，穩定本身就是一種稀缺。',
+    good:[
+      '續約型業務 / 服務型 / 長期維繫',
+      '財務 / 會計 / 運營 / 品管 / 行政',
+      '維運 / 穩定性 / 連鎖擴張型業態'
+    ],
+    bad:[
+      '零到一的開創',
+      '高不確定性的冒險',
+      '需要臨場即興的場合'
+    ],
+    why:[
+      '「我想讓這件事被做到沒有破綻」',
+      '「我想讓人知道——交給我就不用擔心」',
+      '「我想做一件可以做十年的事」'
+    ]
+  }
+};
+
+// =========== SCORING ===========
+function updateProgress(){
+  var f=document.getElementById('F');
+  var c=0;
+  for(var i=1;i<=12;i++){
+    var r=f.elements['q'+i];
+    if(r){for(var j=0;j<r.length;j++){if(r[j].checked){c++;break;}}}
+  }
+  document.getElementById('PBF').style.width=(c/12*100)+'%';
+  document.getElementById('PBT').textContent=c+' / 12 題';
+}
+document.addEventListener('change',function(e){
+  if(e.target && e.target.type==='radio'){updateProgress();}
+});
+
+function GO(){
+  var f=document.getElementById('F');
+  var vals={};var c=0;var firstMissing=-1;
+  for(var i=1;i<=12;i++){
+    var r=f.elements['q'+i];
+    if(r){
+      for(var j=0;j<r.length;j++){
+        if(r[j].checked){vals[i]=r[j].value;c++;break;}
+      }
+    }
+    if(!vals[i]&&firstMissing<0) firstMissing=i;
+  }
+  if(c<12){
+    document.getElementById('sh').textContent='還有 '+(12-c)+' 題沒選';
+    document.getElementById('sh').style.color='#c06b5a';
+    var target=document.getElementById('qc'+firstMissing);
+    if(target){
+      target.scrollIntoView({behavior:'smooth',block:'center'});
+      target.style.boxShadow='0 0 0 3px rgba(192,107,90,0.3)';
+      setTimeout(function(){target.style.boxShadow='';},2000);
+    }
+    return;
+  }
+
+  // Tally
+  var scores={A:0,B:0,C:0,D:0,E:0};
+  for(var i=1;i<=12;i++){ scores[vals[i]]++; }
+
+  // Rank
+  var ranked=[];
+  for(var k in scores){ ranked.push({key:k, score:scores[k]}); }
+  ranked.sort(function(a,b){return b.score-a.score;});
+  var primary=ranked[0];
+  var secondary=ranked[1];
+
+  // Hide test, show result
+  document.getElementById('F').style.display='none';
+  document.getElementById('sw').style.display='none';
+  document.getElementById('intro').style.display='none';
+  document.getElementById('disc-top').style.display='none';
+  document.querySelector('.pb').style.display='none';
+  var ts=document.getElementById('testSection');
+  if(ts) ts.parentNode.removeChild(ts);
+  document.getElementById('R').className='result show';
+  window.scrollTo(0,0);
+
+  var p=TYPES[primary.key];
+  var s=TYPES[secondary.key];
+
+  // Main card
+  document.getElementById('TI').textContent=p.emoji;
+  document.getElementById('TN').textContent=p.name;
+  document.getElementById('TSUB').textContent=p.subtitle;
+  document.getElementById('TD').innerHTML=p.desc;
+
+  // Sub card
+  document.getElementById('SUBNAME').textContent=s.emoji+' '+s.name;
+  document.getElementById('SUBSUB').textContent=s.subtitle;
+  document.getElementById('SUBNOTE').innerHTML='你的次要作戰風格——在主類型之外的第二能量。<br>很多人是<b>'+p.name+'主 + '+s.name+'副</b>的組合。';
+
+  // Bars (all 5)
+  var barsHtml='';
+  for(var i=0;i<ranked.length;i++){
+    var r=ranked[i];
+    var t=TYPES[r.key];
+    var pct=Math.round(r.score/12*100);
+    barsHtml += '<div class="bar-mini">'+
+      '<div class="bm-name">'+t.emoji+' '+t.name+'</div>'+
+      '<div class="bm-track"><div class="bm-fill" style="width:'+pct+'%"></div></div>'+
+      '<div class="bm-val">'+r.score+'/12</div>'+
+    '</div>';
+  }
+  document.getElementById('BARS').innerHTML=barsHtml;
+
+  // Action lists
+  var goodHtml='';
+  for(var i=0;i<p.good.length;i++){ goodHtml += '<div class="line"><b>'+p.good[i]+'</b></div>'; }
+  document.getElementById('ACT-GOOD-LIST').innerHTML=goodHtml;
+
+  var badHtml='';
+  for(var i=0;i<p.bad.length;i++){ badHtml += '<div class="line neg">'+p.bad[i]+'</div>'; }
+  document.getElementById('ACT-BAD-LIST').innerHTML=badHtml;
+
+  var whyHtml='';
+  for(var i=0;i<p.why.length;i++){ whyHtml += '<div class="line">'+p.why[i]+'</div>'; }
+  document.getElementById('ACT-WHY-LIST').innerHTML=whyHtml;
+}
+</script>
+</body>
+</html>
